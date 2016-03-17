@@ -31,12 +31,12 @@ $ oc project prod
 $ oc policy add-role-to-user edit system:serviceaccount:prod:default -n stage
 
 # Create the sample application in the 'stage' and 'prod' namespaces:
-$ oc create -n stage -f https://raw.githubusercontent.com/arilivigni/openshift-ci-pipeline/master/sample-app/sample-app-template.json
-$ oc create -n prod -f https://raw.githubusercontent.com/arilivigni/openshift-ci-pipeline/master/sample-app/sample-app-template.json
+$ oc create -n stage -f https://raw.githubusercontent.com/tariq-islam/openshift-ci-pipeline/master/sample-app/sample-app-template.json
+$ oc create -n prod -f https://raw.githubusercontent.com/tariq-islam/openshift-ci-pipeline/master/sample-app/sample-app-template.json
 
 # Now create the Jenkins Master and Slave templates in the 'ci' namespace:
-$ oc create -n ci -f https://raw.githubusercontent.com/arilivigni/openshift-ci-pipeline/master/examples/master/jenkins-with-k8s-plugin.json
-$ oc create -n ci -f https://raw.githubusercontent.com/arilivigni/openshift-ci-pipeline/master/examples/slave/s2i-slave-template.json
+$ oc create -n ci -f https://raw.githubusercontent.com/tariq-islam/openshift-ci-pipeline/master/examples/master/jenkins-with-k8s-plugin.json
+$ oc create -n ci -f https://raw.githubusercontent.com/tariq-islam/openshift-ci-pipeline/master/examples/slave/s2i-slave-template.json
 ```
 
 ## Instantiating templates from OpenShift web console
